@@ -1,7 +1,7 @@
 // Parameters
 axle_length = 34;
 axle_diameter = 8.2;
-outer_rim_diameter = 16;
+outer_rim_diameter = 15;
 rim_depth = 5.4;
 transition_height = 3;
 resolution = 100;
