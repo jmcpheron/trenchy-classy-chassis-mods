@@ -37,22 +37,13 @@ This repository now follows an **asset-type–first** layout.  Editable CAD live
 
 ## 🛠 Build / Export Workflow
 
-A cross-platform script in `scripts/export.py` walks every `.scad` file and exports STLs into the mirrored path under `stl/`.
+An automated GitHub Actions workflow (`.github/workflows/build-stl.yml`) renders all `.scad` files inside `scad/` to mirrored paths in `stl/` on every push or pull request.  The workflow also uploads the STLs as build artifacts and, when changes are detected on the `main` branch, commits the fresh meshes back to the repository.
+
+If you need a quick local test you can still run OpenSCAD directly:
 
 ```bash
-python3 scripts/export.py            # export all production parts
-python3 scripts/export.py --wip      # include *_proto files
+openscad -o stl/chassis/my_part.stl scad/chassis/my_part.scad
 ```
-
-Under the hood it calls OpenSCAD headlessly:
-
-```bash
-openscad -o stl/chassis/chassis_v2_0.2mm.stl \
-         -D export=true -D layer_height=0.2 \
-         scad/chassis/chassis_v2.scad
-```
-
-The script injects common build parameters so every export is consistent.
 
 ### Recommended Print Settings
 * Nozzle ⌀: **0.4 mm**  (0.2 mm for fine axles)
@@ -70,13 +61,8 @@ The script injects common build parameters so every export is consistent.
 ## 🤝 Contributing
 1. Fork and clone the repo.
 2. Add new OpenSCAD in the correct `scad/<category>/` folder.
-3. Run `scripts/export.py` locally to test; **do not commit STL files**—the CI workflow generates them.
+3. Optionally preview your SCAD locally with OpenSCAD; **do not commit STL files**—the CI workflow generates them.
 4. Open a pull request—screenshots encouraged!
-
----
-
-## 📄 License
-Everything in `scad/` is released under the **CERN-OHL-S** (strongly reciprocal) license.  Vendor parts keep their original licenses.
 
 ---
 

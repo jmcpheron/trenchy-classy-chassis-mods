@@ -10,4 +10,4 @@ stl/
 ```
 
 • STLs are built by the GitHub workflow—this folder may be empty in branches.
-• Do **not** edit files in place; re–generate via `scripts/export.py` for local tests. 
+• Do **not** edit files in place; regenerate locally with OpenSCAD if you need to test. 
