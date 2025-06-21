@@ -1,6 +1,6 @@
 # Trenchy Classy Chassis Mods
 
-A modular, remix-friendly library of OpenSCAD parts (chassis, axles, wheels, rubber tyres) for the Trenchy 1:64 scale truck ecosystem. **This is a community fork of the open-source [3DTrenchy ‘print-in-place truck’ project](https://makerworld.com/en/models/1403367-3dtrenchy-print-in-place-truck?from=search#profileId-1455835).**
+A modular, remix-friendly library of OpenSCAD parts (chassis, axles, wheels, rubber tyres) for the Trenchy 1:64 scale truck ecosystem. **This is a community fork of the open-source [3DTrenchy 'print-in-place truck' project](https://makerworld.com/en/models/1403367-3dtrenchy-print-in-place-truck?from=search#profileId-1455835).**
 
 This repository now follows an **asset-type–first** layout.  Editable CAD lives in `scad/`, generated meshes in `stl/`, docs in `docs/`, and so on.  The goal is to keep the source lightweight while making automation and collaboration easy.
 
@@ -27,6 +27,7 @@ This repository now follows an **asset-type–first** layout.  Editable CAD live
 ├─ stl/                 ← CI-generated meshes (not committed)
 │   ├─ chassis/
 │   ├─ axle/
+│   ├─ rims/
 │   └─ tires/
 │
 ├─ images/              ← renders & reference photos used in docs
