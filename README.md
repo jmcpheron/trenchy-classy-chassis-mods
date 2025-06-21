@@ -1,8 +1,16 @@
 # Trenchy Classy Chassis Mods
 
-A modular, remix-friendly library of OpenSCAD parts (chassis, axles, wheels, rubber tyres) for the Trenchy 1:64 scale truck ecosystem.
+A modular, remix-friendly library of OpenSCAD parts (chassis, axles, wheels, rubber tyres) for the Trenchy 1:64 scale truck ecosystem. **This is a community fork of the open-source [3DTrenchy ‘print-in-place truck’ project](https://makerworld.com/en/models/1403367-3dtrenchy-print-in-place-truck?from=search#profileId-1455835).**
 
 This repository now follows an **asset-type–first** layout.  Editable CAD lives in `scad/`, generated meshes in `stl/`, docs in `docs/`, and so on.  The goal is to keep the source lightweight while making automation and collaboration easy.
+
+---
+
+## 📡 Upstream Inspiration
+* Original model & files: [MakerWorld – 3DTrenchy Print-in-Place Truck](https://makerworld.com/en/models/1403367-3dtrenchy-print-in-place-truck?from=search#profileId-1455835)
+* Announcement & overview video on YouTube: [youtu.be/zc_4vQl6kY4](https://www.youtube.com/watch?v=zc_4vQl6kY4)
+
+3DTrenchy is released under its own license terms as specified by the author; please review those before redistributing or remixing their assets.  This repository re-implements and extends the concept in a parametric, part-library style—no upstream STLs are bundled here.
 
 ---
 
@@ -66,4 +74,9 @@ openscad -o stl/chassis/my_part.stl scad/chassis/my_part.scad
 
 ---
 
-*Part of the community-driven Trenchy ecosystem - because every truck needs classy wheels!*
+## 📄 License
+
+This repository is released under the [MIT License](LICENSE).  The original 3DTrenchy project retains its own separate license.
+
+---
+*Part of the community-driven Trenchy ecosystem – because every truck needs classy wheels!*
