@@ -16,7 +16,7 @@ This repository now follows an **asset-type–first** layout.  Editable CAD live
 │   ├─ axle/            ← standard & magnet axle generators
 │   └─ tires/           ← plastic & TPU tyre models
 │
-├─ stl/                 ← auto-exported meshes (binary, tracked with Git LFS)
+├─ stl/                 ← CI-generated meshes (not committed)
 │   ├─ chassis/
 │   ├─ axle/
 │   └─ tires/
@@ -25,7 +25,6 @@ This repository now follows an **asset-type–first** layout.  Editable CAD live
 ├─ docs/                ← markdown pages (GitHub Pages ready)
 ├─ vendor/              ← third-party STLs / reference CAD (read-only)
 ├─ scripts/             ← build & utility helpers (see below)
-├─ .gitattributes       ← Git LFS configuration
 └─ README.md            ← this file
 ```
 
@@ -68,27 +67,10 @@ The script injects common build parameters so every export is consistent.
 
 ---
 
-## 📜 Git LFS Setup
-Binary artefacts are large; track them via Git LFS:
-
-```
-# .gitattributes
-*.stl  filter=lfs diff=lfs merge=lfs -text
-*.png  filter=lfs diff=lfs merge=lfs -text
-*.jpg  filter=lfs diff=lfs merge=lfs -text
-```
-
-Install once per clone:
-```bash
-git lfs install
-```
-
----
-
 ## 🤝 Contributing
-1. Fork and clone with Git LFS enabled.
+1. Fork and clone the repo.
 2. Add new OpenSCAD in the correct `scad/<category>/` folder.
-3. Run `scripts/export.py` and commit both SCAD + generated STL.
+3. Run `scripts/export.py` locally to test; **do not commit STL files**—the CI workflow generates them.
 4. Open a pull request—screenshots encouraged!
 
 ---

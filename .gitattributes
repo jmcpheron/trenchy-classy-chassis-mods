@@ -1,3 +1,2 @@
-*.stl  filter=lfs diff=lfs merge=lfs -text
-*.png  filter=lfs diff=lfs merge=lfs -text
-*.jpg  filter=lfs diff=lfs merge=lfs -text 
+# .gitattributes
+# No Git LFS integration – all file types use default git behaviour.

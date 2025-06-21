@@ -9,6 +9,5 @@ stl/
 └─ tires/
 ```
 
-• **Tracked with Git LFS** – ensures lightweight clones.
-
-• Do **not** edit files in place; re–generate via `scripts/export.py` instead. 
+• STLs are built by the GitHub workflow—this folder may be empty in branches.
+• Do **not** edit files in place; re–generate via `scripts/export.py` for local tests. 
